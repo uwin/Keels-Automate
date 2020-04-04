@@ -1,7 +1,10 @@
 from selenium import webdriver
 from time import sleep
+
 driver = webdriver.Edge()
 driver.get("https://int.keellssuper.net/login")
+
+
 def login():
     sleep(1)
     driver.find_element_by_xpath("//select[@name='ctl00$BodyContent$ddlDeliveryCity']/option[text()='Malabe']").click()
@@ -15,6 +18,7 @@ def login():
     driver.find_element_by_xpath("//input[@name=\"ctl00$BodyContent$BtnLogin\"]").click()
     sleep(1)
 
+
 def loop(driver):
     try:
         login()
@@ -22,7 +26,46 @@ def loop(driver):
         sleep(1)
         driver.refresh()
         loop(driver)
-loop(driver)
+
+
+def orderstuff(product, items):
+    sleep(1)
+    Product_pre = '"//input[@id=\"BodyContent_RptItemList_txtQty_'
+    Product_post = '\"]"'
+    x = Product_pre + product + Product_post
+
+    Purchase_pre = '"//input[@id=\"BodyContent_RptItemList_btnBuyNow_'
+    Purchase_post = '\"]"'
+    y = Purchase_pre + product + Purchase_post
+
+    driver.find_element_by_xpath(x).clear()
+    sleep(1)
+    driver.find_element_by_xpath(x).send_keys(items)
+    sleep(1)
+    driver.find_element_by_xpath(y).click()
+    sleep(3)
+
+
+def checkout():
+    sleep(3)
+    driver.get("https://int.keellssuper.net/checkout")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_DeliName\"]").send_keys("Uwin Vidanage")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_DeliTele\"]").send_keys("0776573743")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_txtHome\"]").send_keys("44/A, Himbutana Road,",
+                                                                                   "Thalahena, Malabe")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_txtDelMsg\"]").send_keys("house is near udyana mawatha")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_btnHSBCVM\"]").click()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"btnRefundAccept\"]").click()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@name=\"Visa\"]").click()
+    sleep(1)
+
 
 def grocery():
     driver.get("https://int.keellssuper.net/grocery/g")
@@ -76,6 +119,26 @@ def grocery():
     # ---------------
     # 40 coconut milk
     # 41 white sugar
+    orderstuff("1", "1")
+    orderstuff("5", "3")
+    orderstuff("7", "3")
+    orderstuff("10", "1")
+    orderstuff("13", "1")
+    orderstuff("15", "3")
+    orderstuff("16", "1")
+    orderstuff("17", "1")
+    orderstuff("18", "2")
+    orderstuff("24", "1")
+    orderstuff("26", "3")
+    orderstuff("27", "3")
+    orderstuff("28", "2")
+    orderstuff("30", "2")
+    orderstuff("31", "2")
+    orderstuff("33", "1")
+    orderstuff("35", "3")
+    orderstuff("38", "1")
+    orderstuff("39", "2")
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
     sleep(1)
@@ -219,6 +282,8 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_39\"]").click()
     sleep(3)
+
+
 def pharmacy():
     driver.get("https://int.keellssuper.net/pharmacy/p")
     # 0 detol liquid
@@ -228,6 +293,8 @@ def pharmacy():
     # 4 asamodagam
     # -------------------
     # 5 siddhalepa
+
+
 def vegetables():
     driver.get("https://int.keellssuper.net/vegetables/v")
     # 0 big onion
@@ -243,6 +310,7 @@ def vegetables():
     # 9 potatoes
     # -------------
     # 10 red onions
+    orderstuff("4", "1")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_4\"]").clear()
     sleep(1)
@@ -250,6 +318,7 @@ def vegetables():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_4\"]").click()
     sleep(3)
+
 
 def beverages():
     driver.get("https://int.keellssuper.net/beverages/b")
@@ -264,6 +333,10 @@ def beverages():
     # 7 nestamolt 1
     # 8 watawala
     # 9 zesta
+    orderstuff("0", "2")
+    orderstuff("1", "1")
+    orderstuff("2", "2")
+    orderstuff("7", "1")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_2\"]").clear()
     sleep(1)
@@ -295,6 +368,8 @@ def beverages():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_0\"]").click()
     sleep(3)
+
+
 def household():
     driver.get("https://int.keellssuper.net/household/h")
     # 0 bc bottle wash
@@ -329,6 +404,7 @@ def household():
     # --------------------
     # 25 vim liq
     # 26 whisper flow
+    orderstuff("18", "2")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").clear()
     sleep(1)
@@ -337,21 +413,10 @@ def household():
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_18\"]").click()
     sleep(3)
 
-def checkout():
-    sleep(3)
-    driver.get("https://int.keellssuper.net/checkout")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_DeliName\"]").send_keys("Uwin Vidanage")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_DeliTele\"]").send_keys("0776573743")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_txtHome\"]").send_keys("44/A, Himbutana Road,","Thalahena, Malabe")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_txtDelMsg\"]").send_keys("house is near udyana mawatha")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_btnHSBCVM\"]").click()
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"btnRefundAccept\"]").click()
-    sleep(1)
-    driver.find_element_by_xpath("//input[@name=\"Visa\"]").click()
-    sleep(1)
+
+loop(driver)
+grocery()
+pharmacy()
+vegetables()
+beverages()
+household()
