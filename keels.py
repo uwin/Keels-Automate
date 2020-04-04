@@ -78,12 +78,45 @@ def grocery():
     # 40 coconut milk
     # 41 white sugar
     sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_39\"]").clear()
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
     sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_39\"]").send_keys("2")
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").send_keys("1")
     sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_39\"]").click()
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_1\"]").click()
     sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_5\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_5\"]").send_keys("3")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_5\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").send_keys("3")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_7\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_10\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_10\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_10\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_13\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_13\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_13\"]").click()
+    sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_15\"]").clear()
     sleep(1)
@@ -91,6 +124,15 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_15\"]").click()
     sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_16\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_16\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_16\"]").click()
+    sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_17\"]").clear()
     sleep(1)
@@ -98,13 +140,15 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_17\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").clear()
     sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").send_keys("2")
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").send_keys("1")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_18\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_24\"]").clear()
     sleep(1)
@@ -112,6 +156,7 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_24\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_26\"]").clear()
     sleep(1)
@@ -119,6 +164,7 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_26\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_27\"]").clear()
     sleep(1)
@@ -126,6 +172,7 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_27\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_28\"]").clear()
     sleep(1)
@@ -133,6 +180,7 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_28\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_31\"]").clear()
     sleep(1)
@@ -140,6 +188,7 @@ def grocery():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_31\"]").click()
     sleep(3)
+
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_33\"]").clear()
     sleep(1)
@@ -183,7 +232,7 @@ def pharmacy():
 def vegetables():
     driver.get("https://int.keellssuper.net/vegetables/v")
     # 0 big onion
-    # 1 carrot         1
+    # 1 carrot
     # 2 coconut
     # 3 cucumber
     # 4 garlic            1
@@ -203,13 +252,6 @@ def vegetables():
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_4\"]").click()
     sleep(3)
 
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").send_keys("1")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_1\"]").click()
-    sleep(3)
 def beverages():
     driver.get("https://int.keellssuper.net/beverages/b")
     # 0 ambewala freshmilk    2
@@ -232,19 +274,19 @@ def beverages():
     sleep(3)
 
     sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").clear()
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").send_keys("1")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_7\"]").click()
-    sleep(3)
-
-    sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").send_keys("1")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_1\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_7\"]").click()
     sleep(3)
 
     sleep(1)
