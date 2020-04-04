@@ -27,25 +27,6 @@ def loop(driver):
         driver.refresh()
         loop(driver)
 
-
-def orderstuff(product, items):
-    sleep(1)
-    Product_pre = '"//input[@id=\"BodyContent_RptItemList_txtQty_'
-    Product_post = '\"]"'
-    x = Product_pre + product + Product_post
-
-    Purchase_pre = '"//input[@id=\"BodyContent_RptItemList_btnBuyNow_'
-    Purchase_post = '\"]"'
-    y = Purchase_pre + product + Purchase_post
-
-    driver.find_element_by_xpath(x).clear()
-    sleep(1)
-    driver.find_element_by_xpath(x).send_keys(items)
-    sleep(1)
-    driver.find_element_by_xpath(y).click()
-    sleep(3)
-
-
 def checkout():
     sleep(3)
     driver.get("https://int.keellssuper.net/checkout")
@@ -119,25 +100,6 @@ def grocery():
     # ---------------
     # 40 coconut milk
     # 41 white sugar
-    orderstuff("1", "1")
-    orderstuff("5", "3")
-    orderstuff("7", "3")
-    orderstuff("10", "1")
-    orderstuff("13", "1")
-    orderstuff("15", "3")
-    orderstuff("16", "1")
-    orderstuff("17", "1")
-    orderstuff("18", "2")
-    orderstuff("24", "1")
-    orderstuff("26", "3")
-    orderstuff("27", "3")
-    orderstuff("28", "2")
-    orderstuff("30", "2")
-    orderstuff("31", "2")
-    orderstuff("33", "1")
-    orderstuff("35", "3")
-    orderstuff("38", "1")
-    orderstuff("39", "2")
 
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
@@ -333,10 +295,6 @@ def beverages():
     # 7 nestamolt 1
     # 8 watawala
     # 9 zesta
-    orderstuff("0", "2")
-    orderstuff("1", "1")
-    orderstuff("2", "2")
-    orderstuff("7", "1")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_2\"]").clear()
     sleep(1)
@@ -404,7 +362,6 @@ def household():
     # --------------------
     # 25 vim liq
     # 26 whisper flow
-    orderstuff("18", "2")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").clear()
     sleep(1)
