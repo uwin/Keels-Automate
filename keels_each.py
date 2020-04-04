@@ -272,7 +272,6 @@ def vegetables():
     # 9 potatoes
     # -------------
     # 10 red onions
-    orderstuff("4", "1")
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_4\"]").clear()
     sleep(1)
