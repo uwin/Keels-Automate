@@ -30,13 +30,13 @@ def loop(driver):
 
 def orderstuff(product, items):
     sleep(1)
-    Product_pre = '"//input[@id=\"BodyContent_RptItemList_txtQty_'
-    Product_post = '\"]"'
-    x = Product_pre + product + Product_post
+    product_pre = '"//input[@id=\"BodyContent_RptItemList_txtQty_'
+    product_post = '\"]"'
+    x = product_pre + product + product_post
 
-    Purchase_pre = '"//input[@id=\"BodyContent_RptItemList_btnBuyNow_'
-    Purchase_post = '\"]"'
-    y = Purchase_pre + product + Purchase_post
+    purchase_pre = '"//input[@id=\"BodyContent_RptItemList_btnBuyNow_'
+    purchase_post = '\"]"'
+    y = purchase_pre + product + purchase_post
 
     driver.find_element_by_xpath(x).clear()
     sleep(1)

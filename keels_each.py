@@ -7,7 +7,8 @@ driver.get("https://int.keellssuper.net/login")
 
 def login():
     sleep(1)
-    driver.find_element_by_xpath("//select[@name='ctl00$BodyContent$ddlDeliveryCity']/option[text()='Thalahena']").click()
+    driver.find_element_by_xpath(
+        "//select[@name='ctl00$BodyContent$ddlDeliveryCity']/option[text()='Thalahena']").click()
     sleep(1)
     driver.find_element_by_xpath("//select[@name='ctl00$BodyContent$ddlSuburb']/option[text()='Thalahena']").click()
     sleep(1)
@@ -26,6 +27,7 @@ def loop(driver):
         sleep(1)
         driver.refresh()
         loop(driver)
+
 
 def checkout():
     sleep(3)
