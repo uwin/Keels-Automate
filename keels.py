@@ -35,52 +35,52 @@ def grocery():
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_0\"]").click()
     sleep(3)
     # 0 Mackerel
-    # 1 chick pea
+    # 1 chick pea     1
     # 2 green gram(loc)
-    # 3 haris chandra noodless
+    # 3 haris chandra noodless  3
     # 4 kirisamba
     # ---------------
-    # 5 brown sugar
+    # 5 brown sugar 3
     # 6 chile pieces
-    # 7 chille power
-    # 8 curry powder
+    # 7 chille power   3
+    # 8 curry powder R
     # 9 fenel seeds
     # ---------------
-    # 10 goraka
+    # 10 goraka             1
     # 11 maldive fish
     # 12 mustard seeds
-    # 13 peper powder
+    # 13 peper powder 1
     # 14 peper seeds
     # ---------------
-    # 15 curry power
+    # 15 curry power   3
     # 16 red cowpea
-    # 17 soya sauce
-    # 18 white cowpea
+    # 17 soya sauce        1
+    # 18 white cowpea   2
     # 19 whole Chiles
     # ---------------
     # 20 corn flakes
     # 21 oats
     # 22 instant fried rice
     # 23 soy soyameat
-    # 24 coconut milk
+    # 24 coconut milk power 1
     # ---------------
     # 25 maggi nodless
-    # 26 choclet cream biscuit
-    # 27 gold mari
-    # 28 cream craker maliban
+    # 26 choclet cream biscuit  3
+    # 27 gold mari         3
+    # 28 cream craker maliban 2
     # 29 marina coconut oill
     # ---------------
     # 30 cream craker sm munchee
-    # 31 dhal
+    # 31 dhal                        2
     # 32 prima kottume
-    # 33 cooking salt
+    # 33 cooking salt           1
     # 34 nadu rice
     # ---------------
-    # 35 red kekulu
+    # 35 red kekulu               3
     # 36 samba
     # 37 supiri keerisamba
     # 38 white kekulu
-    # 39 samaposha
+    # 39 samaposha              2
     # ---------------
     # 40 coconut milk
     # 41 white sugar
@@ -96,13 +96,13 @@ def pharmacy():
 def vegetables():
     driver.get("https://int.keellssuper.net/vegetables/v")
     # 0 big onion
-    # 1 carrot
-    # 2 coconut
+    # 1 carrot         1
+    # 2 cocnut
     # 3 cucumber
-    # 4 garlic
+    # 4 garlic            1
     # --------------
     # 5 ginger
-    # 6 green beans
+    # 6 breen beans
     # 7 green chilies
     # 8 lime
     # 9 potatoes
@@ -110,15 +110,15 @@ def vegetables():
     # 10 red onions
 def beverages():
     driver.get("https://int.keellssuper.net/beverages/b")
-    # 0 ambewala freshmilk
+    # 0 ambewala freshmilk    2
     # 1 anchor milk
-    # 2 harischanhra coffe
+    # 2 harischanhra coffe       2
     # 3 apple juice
     # 4 milo drink
     # ---------------
     # 5 milo power
     # 6 nescafe
-    # 7 nestamolt
+    # 7 nestamolt 2
     # 8 watawala
     # 9 zesta
 def household():
