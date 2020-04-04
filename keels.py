@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common import keys
 from time import sleep
 driver = webdriver.Edge()
 driver.get("https://int.keellssuper.net/login")
