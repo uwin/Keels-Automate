@@ -86,6 +86,13 @@ def grocery():
     # 41 white sugar
 def pharmacy():
     driver.get("https://int.keellssuper.net/pharmacy/p")
+    # 0 detol liquid
+    # 1 diabetasol sweetner
+    # 2 link pasanguwa
+    # 3 penadol
+    # 4 asamodagam
+    # -------------------
+    # 5 siddhalepa
 def vegetables():
     driver.get("https://int.keellssuper.net/vegetables/v")
     # 0 big onion
