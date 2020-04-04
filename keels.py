@@ -27,35 +27,28 @@ loop(driver)
 
 def grocery():
     driver.get("https://int.keellssuper.net/grocery/g")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_0\"]").clear()
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_0\"]").send_keys("2")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_0\"]").click()
-    sleep(3)
     # 0 Mackerel
-    # 1 chick pea     1
+    # 1 chick pea      1
     # 2 green gram(loc)
-    # 3 haris chandra noodless  3
+    # 3 haris chandra noodless
     # 4 kirisamba
     # ---------------
-    # 5 brown sugar 3
+    # 5 brown sugar    3
     # 6 chile pieces
     # 7 chille power   3
     # 8 curry powder R
     # 9 fenel seeds
     # ---------------
-    # 10 goraka             1
+    # 10 goraka        1
     # 11 maldive fish
     # 12 mustard seeds
-    # 13 peper powder 1
+    # 13 peper powder  1
     # 14 peper seeds
     # ---------------
     # 15 curry power   3
-    # 16 red cowpea
-    # 17 soya sauce        1
-    # 18 white cowpea   2
+    # 16 red cowpea    1
+    # 17 soya sauce    1
+    # 18 white cowpea  2
     # 19 whole Chiles
     # ---------------
     # 20 corn flakes
@@ -70,7 +63,7 @@ def grocery():
     # 28 cream craker maliban 2
     # 29 marina coconut oill
     # ---------------
-    # 30 cream craker sm munchee
+    # 30 cream craker sm munchee  2
     # 31 dhal                        2
     # 32 prima kottume
     # 33 cooking salt           1
@@ -79,11 +72,18 @@ def grocery():
     # 35 red kekulu               3
     # 36 samba
     # 37 supiri keerisamba
-    # 38 white kekulu
+    # 38 white kekulu           1
     # 39 samaposha              2
     # ---------------
     # 40 coconut milk
     # 41 white sugar
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_0\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_0\"]").send_keys("2")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_0\"]").click()
+    sleep(3)
 def pharmacy():
     driver.get("https://int.keellssuper.net/pharmacy/p")
     # 0 detol liquid
@@ -97,30 +97,76 @@ def vegetables():
     driver.get("https://int.keellssuper.net/vegetables/v")
     # 0 big onion
     # 1 carrot         1
-    # 2 cocnut
+    # 2 coconut
     # 3 cucumber
     # 4 garlic            1
     # --------------
     # 5 ginger
-    # 6 breen beans
+    # 6 green beans
     # 7 green chilies
     # 8 lime
     # 9 potatoes
     # -------------
     # 10 red onions
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_4\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_4\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_4\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_1\"]").click()
+    sleep(3)
 def beverages():
     driver.get("https://int.keellssuper.net/beverages/b")
     # 0 ambewala freshmilk    2
-    # 1 anchor milk
-    # 2 harischanhra coffe       2
+    # 1 anchor milk           1
+    # 2 harischanhra coffe    2
     # 3 apple juice
     # 4 milo drink
     # ---------------
     # 5 milo power
     # 6 nescafe
-    # 7 nestamolt 2
+    # 7 nestamolt 1
     # 8 watawala
     # 9 zesta
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_2\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_2\"]").send_keys("2")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_2\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_7\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_7\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_1\"]").send_keys("1")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_1\"]").click()
+    sleep(3)
+
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_0\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_0\"]").send_keys("2")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_0\"]").click()
+    sleep(3)
 def household():
     driver.get("https://int.keellssuper.net/household/h")
     # 0 bc bottle wash
@@ -155,6 +201,13 @@ def household():
     # --------------------
     # 25 vim liq
     # 26 whisper flow
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").clear()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_txtQty_18\"]").send_keys("2")
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_18\"]").click()
+    sleep(3)
 
 def checkout():
     sleep(3)
