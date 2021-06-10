@@ -1,24 +1,46 @@
 from selenium import webdriver
 from time import sleep
 
-driver = webdriver.Edge()
-driver.get("https://int.keellssuper.net/login")
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+
+
+driver = webdriver.Chrome()
+driver.get("https://keellssuper.com/welcome/Login")
 
 
 def login():
     sleep(1)
-    driver.find_element_by_xpath(
-        "//select[@name='ctl00$BodyContent$ddlDeliveryCity']/option[text()='Thalahena']").click()
+    driver.find_element_by_xpath("//input[@name=\"UserName\"]").send_keys("fb.uwin@gmail.com")
     sleep(1)
-    driver.find_element_by_xpath("//select[@name='ctl00$BodyContent$ddlSuburb']/option[text()='Thalahena']").click()
+    driver.find_element_by_xpath("//input[@name=\"Password\"]").send_keys("&A05!or8jX*q")
     sleep(1)
-    driver.find_element_by_xpath("//input[@name=\"ctl00$BodyContent$UserName\"]").send_keys("fb.uwin@gmail.com")
     sleep(1)
-    driver.find_element_by_xpath("//input[@name=\"ctl00$BodyContent$LoginPassword\"]").send_keys("^1LoK^3hktG!^gUD")
-    sleep(1)
-    driver.find_element_by_xpath("//input[@name=\"ctl00$BodyContent$BtnLogin\"]").click()
-    sleep(1)
+    driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div[2]/div[2]/div[1]/div[2]/button").click()
 
+def others(driver):
+    sleep(1)
+    driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div[5]/div/div[2]/div/div[5]/div[1]/div/div/div[1]/div[2]/div/input").send_keys("Thalahena")
+    sleep(1)
+    sleep(1)
+    driver.find_element_by_name("Value").send_keys(Keys.ENTER)
+    sleep(1)
+    sleep(1)
+    driver.find_element_by_xpath("/html/body/div/div/div[3]/div[5]/div/div[2]/div/div[5]/div[2]/div/div/div[1]/div[2]/div/input").send_keys("Thalahena - Malabe RD")
+    sleep(1)
+    sleep(1)
+    driver.find_element_by_name("Value").send_keys(Keys.ENTER)
+    sleep(1)
+    sleep(1)
+    driver.find_element_by_xpath("/html/body/div/div/div[3]/div[5]/div/div[2]/div/div[5]/div[3]/div/div/div[1]/div[2]/div/input").send_keys("Thalahena - Malabe RD")
+    sleep(1)
+    sleep(1)
+    driver.find_element_by_name("Value").send_keys(Keys.ENTER)
+    sleep(1)
+    sleep(1)
+    driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div[5]/div/div[2]/div/div[6]/button").click()
+    
 
 def loop(driver):
     try:
@@ -28,6 +50,8 @@ def loop(driver):
         driver.refresh()
         loop(driver)
 
+loop(driver)
+others(driver)
 
 def checkout():
     sleep(3)
@@ -370,11 +394,3 @@ def household():
     sleep(1)
     driver.find_element_by_xpath("//input[@id=\"BodyContent_RptItemList_btnBuyNow_18\"]").click()
     sleep(3)
-
-
-loop(driver)
-grocery()
-pharmacy()
-vegetables()
-beverages()
-household()
